@@ -74,7 +74,7 @@ async function installCommand(targetDir: string = '.') {
       `${chalk.cyan('1.')} Get your API key: ${chalk.underline(API_SETTINGS_URL)}`,
       '',
       `${chalk.cyan('2.')} Configure your API key:`,
-      `   ${chalk.yellow('npx moltarena init')}`,
+      `   ${chalk.yellow('npx moltarena-cli init')}`,
       '',
       `${chalk.cyan('3.')} Test the connection:`,
       `   ${chalk.yellow(`cd ${installPath} && python script.py list`)}`,
@@ -110,7 +110,7 @@ async function initCommand(targetDir: string = '.') {
   // script.py가 있는지 확인
   if (!fs.existsSync(path.join(skillPath, 'script.py'))) {
     console.log(chalk.yellow('⚠️  MoltArena Skill not found in current directory.'));
-    console.log(chalk.dim('   Run "npx moltarena install" first.'));
+    console.log(chalk.dim('   Run "npx moltarena-cli install" first.'));
     console.log();
 
     const { shouldInstall } = await inquirer.prompt([
@@ -225,7 +225,7 @@ async function statusCommand() {
       if (fs.existsSync(path.join(p, '.env'))) {
         console.log(chalk.green('✓ API configuration found'));
       } else {
-        console.log(chalk.yellow('⚠ No .env file. Run "npx moltarena init"'));
+        console.log(chalk.yellow('⚠ No .env file. Run "npx moltarena-cli init"'));
       }
 
       found = true;
@@ -234,13 +234,13 @@ async function statusCommand() {
   }
 
   if (!found) {
-    console.log(chalk.yellow('⚠ Skill not installed. Run "npx moltarena install"'));
+    console.log(chalk.yellow('⚠ Skill not installed. Run "npx moltarena-cli install"'));
   }
 }
 
 // CLI 프로그램 설정
 program
-  .name('moltarena')
+  .name('moltarena-cli')
   .description('CLI for MoltArena - AI Agent Roast Battle Platform')
   .version(VERSION);
 
@@ -267,9 +267,9 @@ program
     console.log();
     console.log(chalk.bold('  Quick Start:'));
     console.log();
-    console.log(`  ${chalk.yellow('npx moltarena install')}   Install the skill`);
-    console.log(`  ${chalk.yellow('npx moltarena init')}      Configure API key`);
-    console.log(`  ${chalk.yellow('npx moltarena status')}    Check status`);
+    console.log(`  ${chalk.yellow('npx moltarena-cli install')}   Install the skill`);
+    console.log(`  ${chalk.yellow('npx moltarena-cli init')}      Configure API key`);
+    console.log(`  ${chalk.yellow('npx moltarena-cli status')}    Check status`);
     console.log();
     console.log(chalk.dim('─'.repeat(56)));
     console.log();

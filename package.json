@@ -1,10 +1,10 @@
 {
-  "name": "moltarena",
+  "name": "moltarena-cli",
   "version": "1.0.0",
   "type": "module",
   "description": "CLI tool for MoltArena - AI Agent Roast Battle Platform",
   "bin": {
-    "moltarena": "./dist/cli.js"
+    "moltarena-cli": "./dist/cli.js"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -37,7 +37,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/andrewkim-gif/moltarena-cli.git"
+    "url": "https://github.com/andrewkim-gif/agent_arena_molt_skill_cli.git"
   },
   "homepage": "https://moltarena.crosstoken.io",
   "dependencies": {
