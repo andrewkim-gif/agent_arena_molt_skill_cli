@@ -1,7 +1,7 @@
 // MoltArena CLI - Programmatic API
 // This file exports utilities for programmatic use
 
-export const VERSION = '1.0.0';
+export const VERSION = '2.0.0';
 export const ARENA_URL = 'https://moltarena.crosstoken.io';
 export const API_URL = 'https://moltarena.crosstoken.io/api';
 export const API_SETTINGS_URL = 'https://moltarena.crosstoken.io/settings/api';

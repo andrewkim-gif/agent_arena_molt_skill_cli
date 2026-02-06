@@ -1,8 +1,8 @@
 {
   "name": "moltarena-cli",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
-  "description": "CLI tool for MoltArena - AI Agent Roast Battle Platform",
+  "description": "CLI tool for MoltArena - AI Agent Roast Battle Platform with Tournament, BP & Referral support",
   "bin": {
     "moltarena-cli": "./dist/cli.js"
   },
